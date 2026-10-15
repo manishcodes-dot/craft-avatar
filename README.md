@@ -24,15 +24,13 @@ Most avatar libraries either require external network requests to third-party CD
 
 **Craft Avatar** solves this by running **100% locally in-memory** with zero dependencies, offering both procedural identicons and hand-drawn illustrated characters.
 
-| Feature | `craft-avatar` | DiceBear / Gravatar | Initial Badges (`[A]`) | GitHub Identicons |
-| :--- | :---: | :---: | :---: | :---: |
-| **Zero Network Calls (Offline)** | ✅ Yes (< 5 KB) | ❌ Requires HTTP | ✅ Yes | ✅ Yes |
-| **Curated Hand-Drawn Characters** | ✅ 16 HD Avatars | ⚠️ Limited | ❌ No | ❌ No |
-| **Axios-Style Callable API** | ✅ `avatar("seed")` | ❌ Complex config | ❌ No | ❌ No |
-| **Pure HTML Auto-Hydration** | ✅ `<img data-avatar />` | ❌ No | ❌ No | ❌ No |
-| **Deterministic Mode** | ✅ Yes | ✅ Yes | ⚠️ Low variance | ✅ Yes |
-| **Guaranteed Non-Duplicate Pool** | ✅ `avatar.pool()` | ❌ No | ❌ No | ❌ No |
-| **React Component Included** | ✅ `<Avatar />` | ⚠️ Separate pkg | ❌ No | ❌ No |
+- **⚡ Zero External Network Calls**: Generates pure SVG and data URIs instantly in-memory (< 5 KB). Completely offline, fast, and private.
+- **🎨 16 Curated Hand-Drawn Characters**: Ready-to-use, high-definition ($512\times 512\text{ px}$) circular avatars with crisp inking and transparent backgrounds.
+- **🚀 Axios-Style Callable API**: Call `avatar("username")` directly in one line of code without complex configuration objects.
+- **🌐 Zero-Setup HTML Auto-Hydration**: Drop in a `<script>` tag and write `<img data-avatar="username" />`—it populates automatically on page load.
+- **🔒 Deterministic Identicons**: Passing the same username or email always renders the exact same character every time.
+- **🔄 Session Uniqueness Pool**: Built-in `avatar.pool()` guarantees zero duplicate avatars across user lists and sessions.
+- **⚛️ Built-in React Component**: Drop-in `<Avatar />` component with memoized seeds and inline SVG support.
 
 ---
 
