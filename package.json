@@ -1,0 +1,58 @@
+{
+  "name": "craft-avatar",
+  "version": "1.0.0",
+  "description": "A lightweight, zero-dependency SVG avatar generator for unique random and deterministic identicons in JavaScript and React.",
+  "type": "module",
+  "main": "./src/index.cjs",
+  "module": "./src/index.js",
+  "browser": "./dist/craft-avatar.min.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js",
+      "require": "./src/index.cjs",
+      "default": "./src/index.js"
+    },
+    "./react": {
+      "types": "./src/react.d.ts",
+      "import": "./src/react.js"
+    },
+    "./assets/*": "./assets/*"
+  },
+  "files": [
+    "src",
+    "dist",
+    "assets",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node --test",
+    "example": "node examples/generate.js",
+    "prepublishOnly": "node scripts/build.js && node --test"
+  },
+  "keywords": [
+    "avatar",
+    "svg",
+    "identicon",
+    "random-avatar",
+    "unique-avatar",
+    "profile-picture",
+    "generator",
+    "react"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  }
+}
